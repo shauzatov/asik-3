@@ -26,10 +26,10 @@ This project implements a full-stack e-commerce application with complete CRUD (
 The chosen topic is an **e-commerce online store** - a platform where users can browse, view, and manage products, as well as read and write product reviews.
 
 **Justification for Topic:**
-- Highly relevant to modern web development
-- Demonstrates complex data relationships (Products ↔ Reviews)
-- Scalable foundation for a complete e-commerce final project
-- Real-world applicability with potential for future expansion
+ Highly relevant to modern web development
+ Demonstrates complex data relationships (Products ↔ Reviews)
+ Scalable foundation for a complete e-commerce final project
+ Real-world applicability with potential for future expansion
 
 ### 1.2 Primary Object: Product Schema
 
@@ -87,14 +87,14 @@ All five RESTful operations have been implemented with proper error handling and
  Provides clean interface to database
 
 **2. Middleware Layer (middleware/)**
-- Validates incoming requests before they reach route handlers
-- Centralizes validation logic (DRY principle)
-- Returns consistent error messages
+ Validates incoming requests before they reach route handlers
+ Centralizes validation logic (DRY principle)
+ Returns consistent error messages
 
 **3. Routes Layer (server.js)**
-- Handles HTTP requests and responses
-- Coordinates between models and client
-- Implements RESTful conventions
+ Handles HTTP requests and responses
+ Coordinates between models and client
+ Implements RESTful conventions
 
 **4. Frontend Layer (public/)**
  User interface and interactions
