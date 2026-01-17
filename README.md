@@ -273,5 +273,5 @@ The collection contains test cases for:
 
 ## Conclusion
 
-This assignment successfully implements a **production-ready e-commerce CRUD API** that meets all specified requirements
+In this assignment, I developed a backend for an online store using Express and MongoDB. The project was migrated from a local JSON storage to a MongoDB database with Mongoose for data modeling and validation. A full CRUD API was implemented, allowing users to create, read, update, and delete products. Additionally, a simple front-end interface was created to demonstrate interaction with the API and data persistence.
 
