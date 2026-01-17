@@ -1,7 +1,7 @@
 # Assignment 3 - Project Report
 ## Online Store CRUD API with MongoDB
 
-**Student Name:** Shauzat Sayakhat
+**Student:** Shauzat Sayakhat
 
 ---
 
