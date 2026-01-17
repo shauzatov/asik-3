@@ -35,7 +35,7 @@ The chosen topic is an **e-commerce online store** - a platform where users can 
 ### 1.2 Primary Object: Product Schema
 
 The Product schema represents items available for sale in the online store.
-![scr5](res/scr5.png)
+![scr5](res/src5.png)
 **Schema Definition
 **Relationship Management:**
 - Reviews reference Products via `productId` (ObjectId)
@@ -55,37 +55,37 @@ All five RESTful operations have been implemented with proper error handling and
 **Status Code:** `201 Created`  
 **Validation:** Custom middleware + Mongoose schema validation  
 **Response:** Returns created product with MongoDB-generated `_id`
-![scr1](res/scr2.png)
+![scr1](res/src2.png)
 #### READ ALL - GET /products
 **Status Code:** `200 OK`  
 **Features:** Sorted by creation date (newest first)  
 **Response:** Array of all products with count
-![scr2](res/scr1.png)
+![scr2](res/src1.png)
 #### READ ONE - GET /products/:id
 **Status Codes:** 
-- `200 OK` - Product found
-- `404 Not Found` - Product doesn't exist
-- `400 Bad Request` - Invalid ID format
-![scr3](res/scr6.png)
+ `200 OK` - Product found
+ `404 Not Found` - Product doesn't exist
+ `400 Bad Request` - Invalid ID format
+![scr3](res/src6.png)
 #### UPDATE - PUT /products/:id
 **Status Codes:** `200 OK`, `404 Not Found`, `400 Bad Request`  
 **Features:** 
-- Returns updated document (`new: true`)
-- Runs validation on update (`runValidators: true`)
-- Automatically updates `updatedAt` timestamp
-![scr4](res/scr3.png)
+ Returns updated document (`new: true`)
+ Runs validation on update (`runValidators: true`)
+ Automatically updates `updatedAt` timestamp
+![scr4](res/src3.png)
 #### DELETE - DELETE /products/:id
 **Status Codes:** `200 OK`, `404 Not Found`, `400 Bad Request`, `500 Server Error`  
 **Features:** Cascade deletion of related reviews
-![scr6](res/scr4.png)
+![scr6](res/src4.png)
 ## Code Organization & Architecture
 
 ### 3.2 Separation of Concerns
 
 **1. Models Layer (models/)**
-- Defines data structure and validation rules
-- Encapsulates business logic
-- Provides clean interface to database
+ Defines data structure and validation rules
+ Encapsulates business logic
+ Provides clean interface to database
 
 **2. Middleware Layer (middleware/)**
 - Validates incoming requests before they reach route handlers
@@ -98,19 +98,19 @@ All five RESTful operations have been implemented with proper error handling and
 - Implements RESTful conventions
 
 **4. Frontend Layer (public/)**
-- User interface and interactions
-- Communicates with API via fetch()
-- Independent from backend implementation
+ User interface and interactions
+ Communicates with API via fetch()
+ Independent from backend implementation
 
 ### 3.3 Middleware Implementation
 
 **Validation Middleware (middleware/validation.js):**
 
 **Benefits:**
-- Validates data before database operations
-- Provides detailed error messages
-- Reusable across multiple routes
-- Fails fast to prevent invalid data
+ Validates data before database operations
+ Provides detailed error messages
+ Reusable across multiple routes
+ Fails fast to prevent invalid data
 
 ### 3.4 MongoDB Integration
 **Features:**
