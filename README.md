@@ -6,14 +6,13 @@
 ---
 
 ## Table of Contents
-1. [Executive Summary]
-2. [Topic Selection & Schema Design]
-3. [Core Functionality Implementation]
-4. [Code Organization & Architecture]
-5. [Frontend Interface]
-6. [Testing & Validation]
-7. [Conclusion]
-
+1. Executive Summary
+2. Topic Selection & Schema Design
+3. Core Functionality Implementation
+4. Code Organization & Architecture
+5. Frontend Interface
+6. Testing & Validation
+7. Conclusion
 ---
 
 ## Executive Summary
