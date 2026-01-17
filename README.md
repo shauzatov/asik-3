@@ -114,27 +114,27 @@ All five RESTful operations have been implemented with proper error handling and
 
 ### 3.4 MongoDB Integration
 **Features:**
-- Environment-based configuration (.env file)
-- Detailed connection logging for debugging
-- Error handling with helpful messages
-- Automatic reconnection on connection loss
+ Environment-based configuration (.env file)
+ Detailed connection logging for debugging
+ Error handling with helpful messages
+ Automatic reconnection on connection loss
 
 ### 3.5 Error Handling Strategy
 
 **Three-Level Error Handling:**
 
 1. **Validation Layer** (Middleware)
-   - Checks request format and required fields
-   - Returns `400 Bad Request` with specific errors
+    Checks request format and required fields
+    Returns `400 Bad Request` with specific errors
 
 2. **Model Layer** (Mongoose)
-   - Schema validation (types, constraints)
-   - Returns validation errors with field details
+    Schema validation (types, constraints)
+    Returns validation errors with field details
 
 3. **Database Layer** (MongoDB)
-   - Catches connection errors
-   - Handles ObjectId casting errors
-   - Returns appropriate status codes
+    Catches connection errors
+    Handles ObjectId casting errors
+    Returns appropriate status codes
 
 **Example Error Response:**
 ```json
@@ -154,18 +154,18 @@ All five RESTful operations have been implemented with proper error handling and
 ### 4.1 Design Philosophy
 
 The frontend follows a **modern, clean aesthetic** with:
-- Light blue (#E8F4FF) and white color scheme
-- Smooth animations and transitions
-- Responsive grid layout
-- Glassmorphism effects
-- Floating background elements
+ Light blue (#E8F4FF) and white color scheme
+ Smooth animations and transitions
+ Responsive grid layout
+ Glassmorphism effects
+ Floating background elements
 
 ### 4.2 User Interface Features
 
 **1. Navigation System**
-- Three main views: Products, Add Product, Reviews
-- Tab-based navigation with active state indicators
-- Smooth view transitions
+ Three main views: Products, Add Product, Reviews
+ Tab-based navigation with active state indicators
+ Smooth view transitions
 
 **2. Products Grid**
 - Responsive card layout
@@ -228,9 +228,9 @@ function filterProducts() {
 ### 4.4 Responsive Design
 
 **Breakpoints:**
-- Desktop: 1400px max-width container
-- Tablet: Adjusted grid columns
-- Mobile: Single column layout, stacked navigation
+ Desktop: 1400px max-width container
+ Tablet: Adjusted grid columns
+ Mobile: Single column layout, stacked navigation
 
 **Mobile Optimizations:**
 - Touch-friendly buttons
@@ -240,12 +240,12 @@ function filterProducts() {
 
 ### 4.5 Accessibility Features
 
-- Semantic HTML structure
-- ARIA labels where appropriate
-- Keyboard navigation support
-- Focus indicators
-- Alt text for images
-- Color contrast compliance
+ Semantic HTML structure
+ ARIA labels where appropriate
+ Keyboard navigation support
+ Focus indicators
+ Alt text for images
+ Color contrast compliance
 
 ---
 
@@ -265,7 +265,6 @@ The collection contains test cases for:
 **Sample Test Cases:**
 
 | Test Case | Method | Expected Result |
-|-----------|--------|-----------------|
 | Create valid product | POST /products | 201 Created + product object |
 | Create invalid product | POST /products | 400 Bad Request + error details |
 | Get all products | GET /products | 200 OK + products array |
