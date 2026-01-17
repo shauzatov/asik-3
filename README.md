@@ -6,13 +6,13 @@
 ---
 
 ## Table of Contents
-1. [Executive Summary](#executive-summary)
-2. [Topic Selection & Schema Design](#topic-selection--schema-design)
-3. [Core Functionality Implementation](#core-functionality-implementation)
-4. [Code Organization & Architecture](#code-organization--architecture)
-5. [Frontend Interface](#frontend-interface)
-6. [Testing & Validation](#testing--validation)
-7. [Conclusion](#conclusion)
+1. [Executive Summary]
+2. [Topic Selection & Schema Design]
+3. [Core Functionality Implementation]
+4. [Code Organization & Architecture]
+5. [Frontend Interface]
+6. [Testing & Validation]
+7. [Conclusion]
 
 ---
 
@@ -35,7 +35,7 @@ The chosen topic is an **e-commerce online store** - a platform where users can 
 ### 1.2 Primary Object: Product Schema
 
 The Product schema represents items available for sale in the online store.
-
+![scr5](res/scr5.png)
 **Schema Definition
 **Relationship Management:**
 - Reviews reference Products via `productId` (ObjectId)
@@ -55,29 +55,29 @@ All five RESTful operations have been implemented with proper error handling and
 **Status Code:** `201 Created`  
 **Validation:** Custom middleware + Mongoose schema validation  
 **Response:** Returns created product with MongoDB-generated `_id`
-
+![scr1](res/scr2.png)
 #### READ ALL - GET /products
 **Status Code:** `200 OK`  
 **Features:** Sorted by creation date (newest first)  
 **Response:** Array of all products with count
-
+![scr2](res/scr1.png)
 #### READ ONE - GET /products/:id
 **Status Codes:** 
 - `200 OK` - Product found
 - `404 Not Found` - Product doesn't exist
 - `400 Bad Request` - Invalid ID format
-
+![scr3](res/scr6.png)
 #### UPDATE - PUT /products/:id
 **Status Codes:** `200 OK`, `404 Not Found`, `400 Bad Request`  
 **Features:** 
 - Returns updated document (`new: true`)
 - Runs validation on update (`runValidators: true`)
 - Automatically updates `updatedAt` timestamp
-
+![scr4](res/scr3.png)
 #### DELETE - DELETE /products/:id
 **Status Codes:** `200 OK`, `404 Not Found`, `400 Bad Request`, `500 Server Error`  
 **Features:** Cascade deletion of related reviews
-
+![scr6](res/scr4.png)
 ## Code Organization & Architecture
 
 ### 3.2 Separation of Concerns
